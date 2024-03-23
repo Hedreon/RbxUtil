@@ -1,7 +1,7 @@
-local function CountGroup(Group: Model | Folder) : number
-    local Count: number = 0
+local function CountGroup(Group: Model | Folder)
+    local Count = 0
 
-    for _, Descendant: Instance in Group:GetDescendants() do
+    for _, Descendant in Group:GetDescendants() do
         if Descendant:IsA("BasePart") then
             Count += 1
         end

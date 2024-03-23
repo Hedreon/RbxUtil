@@ -1,5 +1,5 @@
-local function SetGroupProperty(Group: Model | Folder, Property: string, Value: any)
-    for _, Descendant: Instance in Group:GetDescendants() do
+local function SetGroupProperty(Group: Model | Folder, Property: string, Value)
+    for _, Descendant in Group:GetDescendants() do
         if Descendant:IsA("BasePart") then
             Descendant[Property] = Value
         end
